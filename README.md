@@ -4,7 +4,7 @@
 
 ```md
 AS a bootcamp student with many homework assignments to organize
-I WANT a task board to order porhects and tasks
+I WANT a task board to order porjects and tasks
 SO THAT I can add individual project tasks, manage their state of progress and track overall project progress accordingly
 ```
 
