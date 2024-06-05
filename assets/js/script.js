@@ -34,9 +34,9 @@ function renderTaskList() {
         $(`#${task.status}-cards`).append(taskCard);
     });
 
-    $(".card").draggable({
-        revert: "invalid",
-        helper: "clone"
+    $(".task-card").draggable({
+    revert: "invalid",
+    helper: "clone"
     });
 
     $(".delete-task").click(handleDeleteTask);
