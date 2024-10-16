@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Task Board</title>
 </head>
@@ -24,8 +23,8 @@
       <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">Add Task</button>
     </div>
 
-    <!-- Modal -->
-     <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+    <!-- Task Modal -->
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -42,6 +41,10 @@
                 <label for="taskDescription" class="form-label">Task Description</label>
                 <textarea class="form-control" id="taskDescription" rows="3"></textarea>
               </div>
+              <div class="mb-3">
+                <label for="taskDeadline" class="form-label">Deadline</label>
+                <input type="date" class="form-control" id="taskDeadline" required>
+              </div>
               <button type="submit" class="btn btn-primary">Add Task</button>
             </form>
           </div>
@@ -53,11 +56,9 @@
       <div class="col-12 col-lg-4 d-flex">
         <div id="to-do" class="card border-light mb-3 lane flex-grow-1">
           <div class="card-header bg-white">
-            <h2 class="card-title mb-1">To Do</h2>
+            <h2 class="card-title mb-1">Not Yet Started</h2>
           </div>
-          <div class="card-body bg-light">
-            <div id="todo-cards"></div>
-          </div>
+          <div class="card-body bg-light" id="todo-cards"></div>
         </div>
       </div>
       <div class="col-12 col-lg-4 d-flex">
@@ -65,26 +66,21 @@
           <div class="card-header bg-white">
             <h2 class="card-title mb-1">In Progress</h2>
           </div>
-          <div class="card-body bg-light">
-            <div id="in-progress-cards"></div>
-          </div>
+          <div class="card-body bg-light" id="in-progress-cards"></div>
         </div>
       </div>
       <div class="col-12 col-lg-4 d-flex">
         <div id="done" class="card border-light mb-3 lane flex-grow-1">
           <div class="card-header bg-white">
-            <h2 class="card-title mb-1">Done</h2>
+            <h2 class="card-title mb-1">Completed</h2>
           </div>
-          <div class="card-body bg-light">
-            <div id="done-cards"></div>
-          </div>
+          <div class="card-body bg-light" id="done-cards"></div>
         </div>
       </div>
     </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
   <script src="./assets/js/script.js"></script>
