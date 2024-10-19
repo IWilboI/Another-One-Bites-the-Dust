@@ -27,4 +27,4 @@ THEN the task is removed from the task board and will not be added back after re
 WHEN I refresh the page
 THEN the saved tasks persist
 
-![Task Board - Google Chrome 6_4_2024 6_45_16 PM](https://github.com/IWilboI/Another-One-Bites-the-Dust/assets/167031800/ab4e5e61-b75c-4cb8-af5b-5bcb22a0d074)
+https://iwilboi.github.io/Another-One-Bites-the-Dust/
